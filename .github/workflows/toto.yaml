@@ -1,0 +1,19 @@
+name: rpct-test
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: test
+    runs-on: rpct-test
+    container: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+#    container:
+#      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+#      credentials:
+#        username: ${{ vars.PERSO_GITHUB_USERNAME }}
+#        password: ${{ secrets.PERSO_ACCOUNT_TOKEN }}
+    steps:
+      - name: "toto"
+        run: |
+          apt update && apt upgrade
+          ls -la
