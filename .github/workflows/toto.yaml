@@ -15,5 +15,5 @@ jobs:
     steps:
       - name: "toto"
         run: |
-          apt update && apt upgrade
+          apt update && apt upgrade -y
           ls -la
